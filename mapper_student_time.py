@@ -18,4 +18,4 @@ for line in reader:
     
     hour = time_added_split[1]
     
-    print hour
+    print "{0}\t{1}".format(author_id, hour)
