@@ -11,5 +11,10 @@ for line in reader:
 
     time_added = line[8]
 
-    print 'author id: %s' %author_id
-    print 'time_added : %s' %time_added	
+    time_added_split = re.split('[" ":]', time_added)
+    
+    hour = time_added_split[1]
+    
+    print time_added_split
+    
+    print hour
