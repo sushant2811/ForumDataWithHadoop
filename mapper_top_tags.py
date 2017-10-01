@@ -14,4 +14,8 @@ for line in reader:
 
     tags_split = re.split('[" "]', tags)
 
-    print len(tags_split)
+    tags_split = filter(None, tags_split) #removing empty tags
+
+    for i in range(0, len(tags_split)):
+		
+		print "{0}\t{1}".format(tags_split[i], 1)
