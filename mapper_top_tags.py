@@ -34,4 +34,6 @@ tags_dict_sorted = sorted(tags_dict.items(), key = operator.itemgetter(1), rever
 
 top10 = tags_dict_sorted[:10]
 
+for i in range(0, len(top10)):
 
+	print "{0}\t{1}".format(top10[i][0], top10[i][1])
