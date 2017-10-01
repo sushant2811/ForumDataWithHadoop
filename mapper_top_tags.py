@@ -3,7 +3,11 @@ import sys
 import csv
 import re
 
+import operator
+
 reader = csv.reader(sys.stdin, delimiter='\t')
+
+tags_dict = {}
 
 for line in reader:
 
@@ -18,4 +22,16 @@ for line in reader:
 
     for i in range(0, len(tags_split)):
 		
-		print "{0}\t{1}".format(tags_split[i], 1)
+		if tags_split[i] in tags_dict:
+
+			tags_dict[tags_split[i]] += 1
+
+		else:
+
+			tags_dict[tags_split[i]] = 1
+
+tags_dict_sorted = sorted(tags_dict.items(), key = operator.itemgetter(1), reverse = True)
+
+top10 = tags_dict_sorted[:10]
+
+
