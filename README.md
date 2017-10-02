@@ -11,3 +11,9 @@ popular tags in the discussion boards.
 The MapReduce implementation is first tested locally on small subset of data and then the 
 Hadoop job is run on a virtual machine which has cloudera's distribution of Hadoop pre-installed. 
 
+Further work: 
+
+1) Do ML on the output. 
+
+2) Complete part 4. 
+
