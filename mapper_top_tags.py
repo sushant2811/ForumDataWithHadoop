@@ -12,7 +12,10 @@ tags_dict = {}
 for line in reader:
 
     if line[0] == 'id':
-    	continue	
+    	continue
+
+    if line[5] != 'question':
+    	continue		
 
     tags = 	line[2]
 
